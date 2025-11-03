@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Registration Form</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-wrap">
+    <div class="container">
+      <h1 class="main-heading">Registration Form</h1> <!-- moved inside container -->
+      <h2 class="subtitle">Online Application / Registration Form</h2>
+
+      <form id="regForm" action="submit.php" method="POST">
+        <label>Full Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number:</label>
+        <input type="number" name="phone" required>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>
+
+        <label>Gender:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+
+        <label>Course Applying For:</label>
+        <select name="course" required>
+          <option value="">--Select Course--</option>
+          <option value="B.Tech Computer Science">B.Tech Computer Science</option>
+          <option value="B.Tech Information Technology">B.Tech Information Technology</option>
+          <option value="BCA">BCA</option>
+          <option value="MCA">MCA</option>
+        </select>
+
+        <label>Skills (Select all that apply):</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="skills[]" value="Python"> Python</label>
+          <label><input type="checkbox" name="skills[]" value="C++"> C++</label>
+          <label><input type="checkbox" name="skills[]" value="Java"> Java</label>
+          <label><input type="checkbox" name="skills[]" value="Web Development"> Web Development</label>
+        </div>
+
+        <label>Address:</label>
+        <textarea name="address" rows="3" placeholder="Enter your address" required></textarea>
+
+        <div class="btn-group">
+          <button type="submit">Submit</button>
+          <button type="reset" class="reset-btn">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
